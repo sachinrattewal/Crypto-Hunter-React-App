@@ -13,7 +13,7 @@ const Signup = ({ handleClose }) => {
 
 
   const handleSubmit = async () => {
-    if(password!=confirmPassword){
+    if(password!==confirmPassword){
         setAlert({
             open: true,
             message: "Passwords do not match",
@@ -25,7 +25,6 @@ const Signup = ({ handleClose }) => {
         const result = await createUserWithEmailAndPassword(auth, email, password);
         setAlert({open: true, message: `Sign Up Successful. Welcome ${result.user.email}`, type: 'success'});
         handleClose();
-        console.log(result);
     } catch (error) {
         setAlert({open: true, message: error.message, type: 'error'});
         return;

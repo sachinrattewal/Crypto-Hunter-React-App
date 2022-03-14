@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { HistoricalChart } from "../config/api";
 import { Line } from "react-chartjs-2";
 import { CircularProgress, createTheme, makeStyles, ThemeProvider } from "@material-ui/core";
-import Chart from 'chart.js/auto'
+import Chart from 'chart.js/auto';
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
@@ -40,10 +40,9 @@ const CoinInfo = ({ coin }) => {
     setHistoricData(data.prices);
   };
 
-  console.log(coin);
-
   useEffect(() => {
     fetchHistoricData();
+    console.log(Chart);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [days]);
 

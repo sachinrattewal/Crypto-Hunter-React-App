@@ -72,7 +72,6 @@ export default function UserSidebar() {
   });
   const { user, setAlert, watchlist, coins, symbol } = CryptoState();
 
-  console.log(watchlist, coins);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
